@@ -11,3 +11,5 @@
 /Users/wuxingogo/Documents/UnityProject/TestCecil/TestCecil/bin/Debug/ICSharpCode.NRefactory.dll
 /Users/wuxingogo/Documents/UnityProject/TestCecil/TestCecil/bin/Debug/ICSharpCode.AvalonEdit.dll
 /Users/wuxingogo/Documents/UnityProject/TestCecil/TestCecil/bin/Debug/UnityEngine.dll
+/Users/wuxingogo/Documents/UnityProject/TestCecil/TestCecil/obj/x86/Debug/.NETFramework,Version=v4.5.1.AssemblyAttribute.cs
+/Users/wuxingogo/Documents/UnityProject/TestCecil/TestCecil/bin/Debug/UnityEditor.dll
