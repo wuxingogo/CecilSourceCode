@@ -1,0 +1,41 @@
+using System;
+using System.Runtime.CompilerServices;
+
+namespace UnityEngine
+{
+	public class Joint2D : Behaviour
+	{
+		public extern Rigidbody2D connectedBody
+		{
+			[WrapperlessIcall]
+			[MethodImpl(MethodImplOptions.InternalCall)]
+			get;
+			[WrapperlessIcall]
+			[MethodImpl(MethodImplOptions.InternalCall)]
+			set;
+		}
+
+		public extern bool enableCollision
+		{
+			[WrapperlessIcall]
+			[MethodImpl(MethodImplOptions.InternalCall)]
+			get;
+			[WrapperlessIcall]
+			[MethodImpl(MethodImplOptions.InternalCall)]
+			set;
+		}
+
+		[Obsolete("Joint2D.collideConnected has been deprecated. Use Joint2D.enableCollision instead (UnityUpgradable) -> enableCollision", true)]
+		public bool collideConnected
+		{
+			get
+			{
+				return this.enableCollision;
+			}
+			set
+			{
+				this.enableCollision = value;
+			}
+		}
+	}
+}

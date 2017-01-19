@@ -1,0 +1,13 @@
+/Users/wuxingogo/Documents/UnityProject/TestCecil/TestCecil/obj/x86/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/Users/wuxingogo/Documents/UnityProject/TestCecil/TestCecil/bin/Debug/TestCecil.exe.mdb
+/Users/wuxingogo/Documents/UnityProject/TestCecil/TestCecil/bin/Debug/TestCecil.exe
+/Users/wuxingogo/Documents/UnityProject/TestCecil/TestCecil/obj/x86/Debug/TestCecil.exe
+/Users/wuxingogo/Documents/UnityProject/TestCecil/TestCecil/obj/x86/Debug/TestCecil.exe.mdb
+/Users/wuxingogo/Documents/UnityProject/TestCecil/TestCecil/bin/Debug/Mono.Cecil.dll
+/Users/wuxingogo/Documents/UnityProject/TestCecil/TestCecil/bin/Debug/ICSharpCode.Decompiler.dll
+/Users/wuxingogo/Documents/UnityProject/TestCecil/TestCecil/bin/Debug/ICSharpCode.NRefactory.CSharp.dll
+/Users/wuxingogo/Documents/UnityProject/TestCecil/TestCecil/bin/Debug/ICSharpCode.TreeView.dll
+/Users/wuxingogo/Documents/UnityProject/TestCecil/TestCecil/bin/Debug/ILSpy.BamlDecompiler.Plugin.dll
+/Users/wuxingogo/Documents/UnityProject/TestCecil/TestCecil/bin/Debug/ICSharpCode.NRefactory.dll
+/Users/wuxingogo/Documents/UnityProject/TestCecil/TestCecil/bin/Debug/ICSharpCode.AvalonEdit.dll
+/Users/wuxingogo/Documents/UnityProject/TestCecil/TestCecil/bin/Debug/UnityEngine.dll
