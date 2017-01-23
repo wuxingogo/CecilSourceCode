@@ -14,7 +14,7 @@ namespace TestCecil
 	{
 		public static void Main (string[] args)
 		{
-			args = new string[]{ "/Users/wuxingogo/Documents/UnityProject/Casting/OneSideWar/Assets/Plugins/WuxingogoExtension/Plugins/WuxingogoRuntime.dll","-a" };
+//			args = new string[]{ "/Users/wuxingogo/Documents/UnityProject/Casting/OneSideWar/Assets/Plugins/WuxingogoExtension/Plugins/WuxingogoRuntime.dll","-a" };
 			string fullCommand = "";
 			for (int i = 0; i < args.Length; i++) {
 				fullCommand += args [i] + " ";
@@ -82,6 +82,9 @@ namespace TestCecil
 					StringWriter output = new StringWriter ();
 					astBuilder.GenerateCode (new PlainTextOutput (output));
 					string result = output.ToString ();
+					Console.WriteLine ("======== Decompile Start ========");
+					Console.WriteLine (result);
+					Console.WriteLine ("======== Decompile Finish ========");
 					output.Dispose ();
 					using (StreamWriter outputFile = new StreamWriter("Output/" + typeInAssembly.Name +".cs")) {
 						outputFile.Write (result);
