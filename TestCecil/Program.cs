@@ -22,6 +22,7 @@ namespace TestCecil
 			Console.WriteLine ("Excute : " + fullCommand);
 			MainClass mc = new MainClass ();
 			int l = args.Length;
+			Console.WriteLine ("l length is : " + l);
 			if (l == 0) {
 				Console.WriteLine ("Argument has Error!");
 				return;
@@ -30,7 +31,12 @@ namespace TestCecil
 				for (int i = 0; i < args.Length; i++) {
 					switch (args[i]) {
 					case "-a":
-						mc.DecompileAllDLL (allDll);
+						{
+							for (int j = i + 1; j < args.Length; j++) {
+								allDll.Add (args [j]);
+							}
+							mc.DecompileAllDLL (allDll);
+						}
 						return;
 					case "-s":
 						List<string> allclass = new List<string> ();
@@ -64,6 +70,7 @@ namespace TestCecil
 
 		void DecompileAllDLL(List<string> args)
 		{
+			Console.WriteLine ("******* Mode : DecompileAllDLL *******");
 			for (int i = 0; i < args.Count; i++) {
 				Console.WriteLine ("******* start decompile : " + args[i] + " *******");
 				this.DecompileDLL (args [i]);
