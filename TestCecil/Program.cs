@@ -80,7 +80,14 @@ namespace TestCecil
 
 		void DecompileFile(string dllName, string className)
 		{
-			Mono.Cecil.AssemblyDefinition assemblyDefinition = Mono.Cecil.AssemblyDefinition.ReadAssembly (dllName);
+			var resolver = new MyDefaultAssemblyResolver();
+			resolver.AddSearchDirectory("FolderOfMyAssembly");
+			var parameters = new ReaderParameters
+			{
+				AssemblyResolver = resolver,
+			};
+
+			Mono.Cecil.AssemblyDefinition assemblyDefinition = Mono.Cecil.AssemblyDefinition.ReadAssembly (dllName, parameters);
 			AstBuilder astBuilder = null;
 			foreach (var typeInAssembly in assemblyDefinition.MainModule.Types) {
 				if (typeInAssembly.Name == className) {
@@ -102,7 +109,14 @@ namespace TestCecil
 
 		void DecompileDLL(string dllName)
 		{
-			Mono.Cecil.AssemblyDefinition assemblyDefinition = Mono.Cecil.AssemblyDefinition.ReadAssembly (dllName);
+			var resolver = new MyDefaultAssemblyResolver();
+			resolver.AddSearchDirectory("FolderOfMyAssembly");
+			var parameters = new ReaderParameters
+			{
+				AssemblyResolver = resolver,
+			};
+			
+			Mono.Cecil.AssemblyDefinition assemblyDefinition = Mono.Cecil.AssemblyDefinition.ReadAssembly (dllName, parameters);
 			AstBuilder astBuilder = null;
 
 			foreach (var typeInAssembly in assemblyDefinition.MainModule.Types) {
@@ -120,7 +134,7 @@ namespace TestCecil
 							outputFile.Write (result);
 						}
 					}catch(AssemblyResolutionException e){
-						
+						Console.WriteLine (e.ToString ());
 					}
 
 				}
